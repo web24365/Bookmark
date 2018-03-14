@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}create{% endblock %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <!-- p로 묶음, table로 묶음, ul로 묶음 선택 가능 -->
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Create" />
+</form>
+{% endblock %}
